@@ -1,0 +1,29 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\DiSeven\\Desktop\\Proyectos .NET\\RecipesApiBlazor\\WebAPIBlazor\\WebAPIBlazor\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\WebAPIBlazor.bundle.scp.css",
+      "PackagePath": "staticwebassets\\WebAPIBlazor.bundle.scp.css"
+    },
+    {
+      "Id": "C:\\Users\\DiSeven\\Desktop\\Proyectos .NET\\RecipesApiBlazor\\WebAPIBlazor\\WebAPIBlazor\\wwwroot\\app.css",
+      "PackagePath": "staticwebassets\\app.css"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.WebAPIBlazor.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.WebAPIBlazor.props",
+      "PackagePath": "build\\WebAPIBlazor.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.WebAPIBlazor.props",
+      "PackagePath": "buildMultiTargeting\\WebAPIBlazor.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.WebAPIBlazor.props",
+      "PackagePath": "buildTransitive\\WebAPIBlazor.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

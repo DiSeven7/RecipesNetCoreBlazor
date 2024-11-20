@@ -1,0 +1,16 @@
+﻿@using WebAPIBlazor.Components.DTO
+@page "/"
+@rendermode InteractiveWebAssembly
+<h3>Recetas</h3>
+
+<script>
+    $(document).ready(function () {
+        alert("Hola mundo!");
+    });
+</script>
+
+@foreach (Receta receta in Recetas)
+{
+    <h2>@receta.NombreReceta</h2>
+    <br />
+}

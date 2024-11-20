@@ -1,0 +1,29 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\DiSeven\\Desktop\\Proyectos .NET\\RecipesApiBlazor\\WebAPIBlazor\\WebAPIBlazor.Client\\bin\\Debug\\net8.0\\wwwroot\\_framework\\blazor.webassembly.js",
+      "PackagePath": "staticwebassets\\_framework\\blazor.webassembly.js"
+    },
+    {
+      "Id": "C:\\Users\\DiSeven\\Desktop\\Proyectos .NET\\RecipesApiBlazor\\WebAPIBlazor\\WebAPIBlazor.Client\\obj\\Debug\\net8.0\\compressed\\jtm9vqtshm.gz",
+      "PackagePath": "staticwebassets\\_framework\\blazor.webassembly.js.gz"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.WebAPIBlazor.Client.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.WebAPIBlazor.Client.props",
+      "PackagePath": "build\\WebAPIBlazor.Client.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.WebAPIBlazor.Client.props",
+      "PackagePath": "buildMultiTargeting\\WebAPIBlazor.Client.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.WebAPIBlazor.Client.props",
+      "PackagePath": "buildTransitive\\WebAPIBlazor.Client.props"
+    }
+  ],
+  "ElementsToRemove": []
+}
