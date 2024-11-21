@@ -85,6 +85,19 @@ namespace PruebasAPIBlazor.Controllers
             }
         }
 
+        [HttpGet("getRecetasDificultad/{idDificultad}")]
+        public async Task<ActionResult<IEnumerable<Receta>>> GetRecetasDificultad(int idDificultad)
+        {
+            if (_context.Recetas.Any(x => (int)x.Dificultad == idDificultad))
+            {
+                return Ok(await _context.Recetas.Where(x => (int)x.Dificultad == idDificultad).ToListAsync());
+            }
+            else
+            {
+                return NotFound("No hay recetas para la dificultad indicada");
+            }
+        }
+
         #endregion
 
         #region Puts

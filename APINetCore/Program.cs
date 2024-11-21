@@ -1,5 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 using PruebasAPIBlazor.Context;
+using PruebasAPIBlazor.Helpers;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -14,8 +15,16 @@ builder.Services.AddDbContext<ApplicationDbContext>(options =>
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddSingleton<ConfigurationManager>(builder.Configuration);
+builder.Services.AddTransient<DbSeeder>();
 
 var app = builder.Build();
+
+using (var scope = app.Services.CreateScope())
+{
+    var seeder = scope.ServiceProvider.GetRequiredService<DbSeeder>();
+    seeder.SeedUsuarios();
+    seeder.SeedRecetas();
+}
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())

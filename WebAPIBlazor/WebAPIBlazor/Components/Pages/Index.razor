@@ -1,16 +1,35 @@
 ﻿@using WebAPIBlazor.Components.DTO
 @page "/"
-@rendermode InteractiveWebAssembly
-<h3>Recetas</h3>
+@rendermode InteractiveServer
+<div class="row">
+    <div class="col-sm-7">
+        <h2 class="text text-center">Últimas recetas añadidas</h2>
+        @for (int i = 1; i < 4; i++)
+        {
+            <div class="card flex-row mt-2" style="width:100%">
+                <img class="card-img-sm-left" src="@Recetas.ElementAt(Recetas.Count-i).Imagen" alt="Card image cap" style="height:auto;width:25%">
+                <div class="card-body">
+                    <h5 class="card-title">@Recetas.ElementAt(Recetas.Count - i).NombreReceta</h5>
+                    <p class="card-text">@Recetas.ElementAt(Recetas.Count - i).Descripcion.Substring(0, 150)...</p>
+                    <a href="#" class="btn btn-success">Ver receta</a>
+                </div>
+            </div>
+        }
 
-<script>
-    $(document).ready(function () {
-        alert("Hola mundo!");
-    });
-</script>
-
-@foreach (Receta receta in Recetas)
-{
-    <h2>@receta.NombreReceta</h2>
-    <br />
-}
+    </div>
+    <div class="col-sm-5 justify-content-center">
+        <h2 class="text text-center">Otras ideas de receta</h2>
+        @for (int i = 0; i < 3; i++)
+        {
+            int random = GetRecetaRandom();
+            <div class="card flex-row mt-2" style="width:100%">
+                <div class="card-body">
+                    <h5 class="card-title">@Recetas.ElementAt(random).NombreReceta</h5>
+                    <p class="card-text">@Recetas.ElementAt(random).Descripcion.Substring(0, 50)...</p>
+                    <a href="#" class="btn btn-primary">Ver receta</a>
+                </div>
+                <img class="card-img-sm-right" src="@Recetas.ElementAt(random).Imagen" alt="Card image cap" style="height:auto;width:25%">
+            </div>
+        }
+    </div>
+</div>

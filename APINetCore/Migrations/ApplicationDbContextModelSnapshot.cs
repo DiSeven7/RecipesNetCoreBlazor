@@ -36,12 +36,15 @@ namespace PruebasAPIBlazor.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<int>("Dificultad")
+                        .HasColumnType("int");
+
                     b.Property<int>("IdAutor")
                         .HasColumnType("int");
 
-                    b.Property<byte[]>("Imagen")
+                    b.Property<string>("Imagen")
                         .IsRequired()
-                        .HasColumnType("varbinary(max)");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Ingredientes")
                         .IsRequired()
@@ -53,6 +56,9 @@ namespace PruebasAPIBlazor.Migrations
 
                     b.Property<string>("Referencias")
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("Tiempo")
+                        .HasColumnType("int");
 
                     b.HasKey("Id");
 

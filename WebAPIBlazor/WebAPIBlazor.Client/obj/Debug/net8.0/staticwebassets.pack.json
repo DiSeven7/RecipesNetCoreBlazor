@@ -1,11 +1,11 @@
 {
   "Files": [
     {
-      "Id": "C:\\Users\\DiSeven\\Desktop\\Proyectos .NET\\RecipesApiBlazor\\WebAPIBlazor\\WebAPIBlazor.Client\\bin\\Debug\\net8.0\\wwwroot\\_framework\\blazor.webassembly.js",
+      "Id": "C:\\Users\\DiSeven\\Desktop\\Proyectos .NET\\RecipesNetCoreBlazor\\WebAPIBlazor\\WebAPIBlazor.Client\\bin\\Debug\\net8.0\\wwwroot\\_framework\\blazor.webassembly.js",
       "PackagePath": "staticwebassets\\_framework\\blazor.webassembly.js"
     },
     {
-      "Id": "C:\\Users\\DiSeven\\Desktop\\Proyectos .NET\\RecipesApiBlazor\\WebAPIBlazor\\WebAPIBlazor.Client\\obj\\Debug\\net8.0\\compressed\\jtm9vqtshm.gz",
+      "Id": "C:\\Users\\DiSeven\\Desktop\\Proyectos .NET\\RecipesNetCoreBlazor\\WebAPIBlazor\\WebAPIBlazor.Client\\obj\\Debug\\net8.0\\compressed\\jtm9vqtshm.gz",
       "PackagePath": "staticwebassets\\_framework\\blazor.webassembly.js.gz"
     },
     {

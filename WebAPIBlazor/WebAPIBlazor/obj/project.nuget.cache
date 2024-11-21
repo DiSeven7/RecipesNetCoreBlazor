@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "KsVe+Ml3v0U=",
+  "dgSpecHash": "/s2jH8SnWK8=",
   "success": true,
-  "projectFilePath": "C:\\Users\\DiSeven\\Desktop\\Proyectos .NET\\RecipesApiBlazor\\WebAPIBlazor\\WebAPIBlazor\\WebAPIBlazor.csproj",
+  "projectFilePath": "C:\\Users\\DiSeven\\Desktop\\Proyectos .NET\\RecipesNetCoreBlazor\\WebAPIBlazor\\WebAPIBlazor\\WebAPIBlazor.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\DiSeven\\.nuget\\packages\\microsoft.aspnetcore.authorization\\8.0.8\\microsoft.aspnetcore.authorization.8.0.8.nupkg.sha512",
     "C:\\Users\\DiSeven\\.nuget\\packages\\microsoft.aspnetcore.components\\8.0.8\\microsoft.aspnetcore.components.8.0.8.nupkg.sha512",

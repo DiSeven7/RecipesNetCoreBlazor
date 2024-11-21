@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Hr7l0QnKUOc=",
+  "dgSpecHash": "To003IMYKaI=",
   "success": true,
-  "projectFilePath": "C:\\Users\\DiSeven\\Desktop\\Proyectos .NET\\RecipesApiBlazor\\APINetCore\\PruebasAPIBlazor.csproj",
+  "projectFilePath": "C:\\Users\\DiSeven\\Desktop\\Proyectos .NET\\RecipesNetCoreBlazor\\APINetCore\\PruebasAPIBlazor.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\DiSeven\\.nuget\\packages\\azure.core\\1.38.0\\azure.core.1.38.0.nupkg.sha512",
     "C:\\Users\\DiSeven\\.nuget\\packages\\azure.identity\\1.11.4\\azure.identity.1.11.4.nupkg.sha512",

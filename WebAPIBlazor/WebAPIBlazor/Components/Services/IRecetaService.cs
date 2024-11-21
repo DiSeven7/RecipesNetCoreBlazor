@@ -10,6 +10,8 @@ namespace WebAPIBlazor.Components.Services
 
         List<Receta> GetRecetasCategoria(int idCategoria);
 
+        List<Receta> GetRecetasDificultad(int idDificultad);
+
         Receta GetReceta(int id);
 
         Task<bool> PostReceta(Receta receta);

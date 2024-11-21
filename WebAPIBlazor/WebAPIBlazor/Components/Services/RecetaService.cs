@@ -7,6 +7,7 @@ namespace WebAPIBlazor.Components.Services
     public class RecetaService : IRecetaService
     {
         private HttpClient HttpClient { get; set; }
+
         public RecetaService(HttpClient httpClient)
         {
             HttpClient = httpClient;            
@@ -39,6 +40,11 @@ namespace WebAPIBlazor.Components.Services
         }
 
         public List<Receta> GetRecetasCategoria(int idCategoria)
+        {
+            throw new NotImplementedException();
+        }
+
+        public List<Receta> GetRecetasDificultad(int idDificultad)
         {
             throw new NotImplementedException();
         }

@@ -7,17 +7,28 @@
     <base href="/" />
     <link rel="stylesheet" href="app.css" />
     <link rel="stylesheet" href="WebAPIBlazor.styles.css" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" />
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
-            integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
-            crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <style>
+        .textosFooter {
+            text-decoration: none;
+            color: white;
+        }
+
+        .row {
+            margin: 0;
+        }
+    </style>
     <HeadOutlet />
 </head>
 
 <body style="background-color:#f1f1f1">
-    <Routes />
-    <script src="_framework/blazor.web.js"></script>
+    <WebAPIBlazor.Components.Layout.NavBar />
+    <div class="container-fluid mt-2">
+        <script src="_framework/blazor.web.js"></script>
+        <Routes />
+    </div>
 </body>
-
+<WebAPIBlazor.Components.Layout.Footer />
 </html>

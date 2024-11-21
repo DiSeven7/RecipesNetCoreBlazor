@@ -15,9 +15,13 @@ namespace PruebasAPIBlazor.Models
 
         public required string Descripcion { get; set; }
 
+        public required int Tiempo { get; set; }
+
         public required Categoria Categoria { get; set; }
 
-        public required byte[] Imagen { get; set; }
+        public required Dificultad Dificultad { get; set; }
+
+        public required string Imagen { get; set; }
 
         public string? Referencias { get; set; }
     }

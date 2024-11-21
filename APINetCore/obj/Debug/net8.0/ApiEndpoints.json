@@ -89,6 +89,32 @@
   },
   {
     "ContainingType": "PruebasAPIBlazor.Controllers.RecetasController",
+    "Method": "GetRecetasDificultad",
+    "RelativePath": "api/Recetas/getRecetasDificultad/{idDificultad}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "idDificultad",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[PruebasAPIBlazor.Models.Receta, PruebasAPIBlazor, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "PruebasAPIBlazor.Controllers.RecetasController",
     "Method": "GetRecetasUsuario",
     "RelativePath": "api/Recetas/getRecetasUsuario/{idAutor}",
     "HttpMethod": "GET",
