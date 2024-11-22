@@ -53,11 +53,19 @@ namespace PruebasAPIBlazor.Controllers
                 {
                     if (usuario.Contraseña.Length >= 6)
                     {
-                        usuario.Contraseña = PasswordHelpers.Encrypt(usuario.Contraseña, _config.GetSection("Salt").Value);
-                        _context.Usuarios.Add(usuario);
-                        await _context.SaveChangesAsync();
+                        if (usuario.Verificado)
+                        {
 
-                        return Ok("Usuario creado correctamente");
+                            usuario.Contraseña = PasswordHelpers.Encrypt(usuario.Contraseña, _config.GetSection("Salt").Value);
+                            _context.Usuarios.Add(usuario);
+                            await _context.SaveChangesAsync();
+
+                            return Ok("Usuario creado correctamente");
+                        }
+                        else
+                        {
+                            return BadRequest("La cuenta no ha sido todavía verificada");
+                        }
                     }
                     else
                     {

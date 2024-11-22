@@ -1,0 +1,57 @@
+﻿@page "/receta/{Id:int}"
+@rendermode InteractiveServer
+<PageTitle>@Receta.NombreReceta</PageTitle>
+<div class="row">
+    <div class="col-sm-4">
+        <div class="card mt-2">
+            <img src="@Receta.Imagen" class="card-img-top" alt="Receta hecha" style="height:20%;width:100%">
+            <p style="text-align:center;margin-top:3%">Publicada por <span style="color:darkolivegreen;font-weight:bold">@Autor.Split('@').First()</span></p>
+            <p style="margin-left:3%;margin-top:3%">Dificultad: <span style="color:darkolivegreen;font-weight:bold">@Receta.Dificultad.ToString()</span></p>
+            <p style="margin-left:3%">Tiempo de preparación: <span style="color:darkolivegreen;font-weight:bold">@Receta.Tiempo minutos</span></p>
+        </div>
+    </div>
+    <div class="col-sm-8">
+        <div class="card mt-2">
+            <div class="card-body">
+                <h2 class="card-title" style="color:darkolivegreen;font-weight:bold">@Receta.NombreReceta</h2>
+            </div>
+        </div>
+        <div class="card mt-2">
+            <div class="card-body">
+                <span style="color:darkolivegreen;font-weight:bold;margin-bottom:3%">Ingredientes:</span>
+                <ul class="list-group list-group-flush">
+                    @foreach (string ingrediente in Receta.Ingredientes.Split(';'))
+                    {
+                        <li class="list-group-item">@ingrediente</li>
+                    }
+                </ul>
+            </div>
+        </div>
+        <div class="card mt-2 mb-2">
+            <div class="card-body">
+                <span style="color:darkolivegreen;font-weight:bold;margin-bottom:3%">Preparación:</span>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">
+                        <p>@Receta.Descripcion</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        @if (Receta.Referencias != null)
+        {
+            <div class="card mb-2">
+                <div class="card-body">
+                    <span style="color:darkolivegreen;font-weight:bold;margin-bottom:3%">Referencias:</span>
+                    <ul class="list-group list-group-flush">
+                        @foreach (string referencia in Receta.Referencias.Split(';'))
+                        {
+                            <li class="list-group-item">
+                                <a href="@referencia" style="color:darkolivegreen;font-weight:bold">@referencia</a>
+                            </li>
+                        }
+                    </ul>
+                </div>
+            </div>
+        }
+    </div>
+</div>

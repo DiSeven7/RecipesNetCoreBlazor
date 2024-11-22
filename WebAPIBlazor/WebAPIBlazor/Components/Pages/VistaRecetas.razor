@@ -1,1 +1,29 @@
-﻿@page "/{Tipo}/{Nivel:int}"
+﻿@page "/{Tipo}/{Id:int}"
+@using WebAPIBlazor.Components.DTO
+@rendermode InteractiveServer
+<PageTitle>@Titulo</PageTitle>
+<div class="row">
+    <div class="col-sm-12">
+        <h2 class="text text-center">@Titulo</h2>
+        @if (Recetas != null)
+        {
+            @foreach (Receta receta in Recetas)
+            {
+                <div class="card flex-row mt-2" style="width:100%">
+                    <img class="card-img-sm-left" src="@receta.Imagen" alt="Receta hecha" style="height:auto;width:25%">
+                    <div class="card-body">
+                        <h5 class="card-title">@receta.NombreReceta</h5>
+                        <p class="card-text">@receta.Descripcion.Substring(0, receta.Descripcion.Length < 300 ? receta.Descripcion.Length : 300)...</p>
+                        <a href="/receta/@receta.Id" class="btn btn-success">Ver receta completa</a>
+                    </div>
+                </div>
+            }
+        }
+        else
+        {
+            <center>
+                <img src="/vacio.png" class="img img-responsive mt-4" style="width:30%" />
+            </center>
+        }
+    </div>
+</div>

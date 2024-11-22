@@ -8,13 +8,13 @@ namespace WebAPIBlazor.Components.Services
 
         Usuario GetUsuario(int id);
 
-        Task<bool> PostUsuario(Usuario usuario);
+        bool PostUsuario(Usuario usuario);
 
-        Task<bool> PutUsuario(Usuario usuario);
+        bool PutUsuario(Usuario usuario);
 
-        Task<bool> DeleteUsuario(Usuario usuario);
+        bool DeleteUsuario(Usuario usuario);
 
-        Task<bool> Login(Usuario usuario);
+        int Login(Usuario usuario);
 
     }
 }

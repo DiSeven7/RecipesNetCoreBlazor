@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "DtPWak4ZCAA8TNbOe4Z9Ib32Nc6Ve91MQULEjIlVwec=",
+  "Hash": "7GRnq1iHPhOhxPFq/aTZz87IPcDys1R2laZiAMf64uM=",
   "Source": "WebAPIBlazor",
   "BasePath": "_content/WebAPIBlazor",
   "Mode": "Default",
@@ -7819,6 +7819,25 @@
       "OriginalItemSpec": "C:\\Users\\DiSeven\\Desktop\\Proyectos .NET\\RecipesNetCoreBlazor\\WebAPIBlazor\\WebAPIBlazor\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\WebAPIBlazor.bundle.scp.css"
     },
     {
+      "Identity": "C:\\Users\\DiSeven\\Desktop\\Proyectos .NET\\RecipesNetCoreBlazor\\WebAPIBlazor\\WebAPIBlazor\\wwwroot\\404.png",
+      "SourceId": "WebAPIBlazor",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\DiSeven\\Desktop\\Proyectos .NET\\RecipesNetCoreBlazor\\WebAPIBlazor\\WebAPIBlazor\\wwwroot\\",
+      "BasePath": "_content/WebAPIBlazor",
+      "RelativePath": "404.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\404.png"
+    },
+    {
       "Identity": "C:\\Users\\DiSeven\\Desktop\\Proyectos .NET\\RecipesNetCoreBlazor\\WebAPIBlazor\\WebAPIBlazor\\wwwroot\\app.css",
       "SourceId": "WebAPIBlazor",
       "SourceType": "Discovered",
@@ -7836,6 +7855,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\app.css"
+    },
+    {
+      "Identity": "C:\\Users\\DiSeven\\Desktop\\Proyectos .NET\\RecipesNetCoreBlazor\\WebAPIBlazor\\WebAPIBlazor\\wwwroot\\vacio.png",
+      "SourceId": "WebAPIBlazor",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\DiSeven\\Desktop\\Proyectos .NET\\RecipesNetCoreBlazor\\WebAPIBlazor\\WebAPIBlazor\\wwwroot\\",
+      "BasePath": "_content/WebAPIBlazor",
+      "RelativePath": "vacio.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\vacio.png"
     }
   ]
 }

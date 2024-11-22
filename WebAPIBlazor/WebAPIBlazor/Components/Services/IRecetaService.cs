@@ -14,10 +14,10 @@ namespace WebAPIBlazor.Components.Services
 
         Receta GetReceta(int id);
 
-        Task<bool> PostReceta(Receta receta);
+        bool PostReceta(Receta receta);
 
-        Task<bool> PutReceta(Receta receta);
+        bool PutReceta(Receta receta);
 
-        Task<bool> DeleteReceta(Receta receta);
+        bool DeleteReceta(Receta receta);
     }
 }

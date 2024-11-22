@@ -10,17 +10,23 @@ namespace WebAPIBlazor.Components.Services
 
         public RecetaService(HttpClient httpClient)
         {
-            HttpClient = httpClient;            
-        }
-
-        public Task<bool> DeleteReceta(Receta receta)
-        {
-            throw new NotImplementedException();
+            HttpClient = httpClient;
         }
 
         public Receta GetReceta(int id)
         {
-            throw new NotImplementedException();
+            var response = HttpClient.GetAsync($"getReceta/{id}").Result;
+            if (response.IsSuccessStatusCode)
+            {
+                string json = response.Content.ReadAsStringAsync().Result;
+                var ListaRecetas = JsonConvert.DeserializeObject<Receta>(json);
+
+                return ListaRecetas;
+            }
+            else
+            {
+                return null;
+            }
         }
 
         public List<Receta> GetRecetas()
@@ -41,27 +47,68 @@ namespace WebAPIBlazor.Components.Services
 
         public List<Receta> GetRecetasCategoria(int idCategoria)
         {
-            throw new NotImplementedException();
+            var response = HttpClient.GetAsync($"getRecetasCategoria/{idCategoria}").Result;
+            if (response.IsSuccessStatusCode)
+            {
+                string json = response.Content.ReadAsStringAsync().Result;
+                var ListaRecetas = JsonConvert.DeserializeObject<List<Receta>>(json);
+
+                return ListaRecetas;
+            }
+            else
+            {
+                return null;
+            }
         }
 
         public List<Receta> GetRecetasDificultad(int idDificultad)
         {
-            throw new NotImplementedException();
+            var response = HttpClient.GetAsync($"getRecetasDificultad/{idDificultad}").Result;
+            if (response.IsSuccessStatusCode)
+            {
+                string json = response.Content.ReadAsStringAsync().Result;
+                var ListaRecetas = JsonConvert.DeserializeObject<List<Receta>>(json);
+
+                return ListaRecetas;
+            }
+            else
+            {
+                return null;
+            }
         }
 
         public List<Receta> GetRecetasUsuario(int idAutor)
         {
-            throw new NotImplementedException();
+            var response = HttpClient.GetAsync($"getRecetasUsuario/{idAutor}").Result;
+            if (response.IsSuccessStatusCode)
+            {
+                string json = response.Content.ReadAsStringAsync().Result;
+                var ListaRecetas = JsonConvert.DeserializeObject<List<Receta>>(json);
+
+                return ListaRecetas;
+            }
+            else
+            {
+                return null;
+            }
         }
 
-        public Task<bool> PostReceta(Receta receta)
+        public bool PostReceta(Receta receta)
         {
-            throw new NotImplementedException();
+            var response = HttpClient.PostAsJsonAsync($"postReceta", receta).Result;
+            return response.IsSuccessStatusCode ? true : false;
         }
 
-        public Task<bool> PutReceta(Receta receta)
+        public bool PutReceta(Receta receta)
         {
-            throw new NotImplementedException();
+            var response = HttpClient.PutAsJsonAsync($"putReceta/{receta.Id}", receta).Result;
+            return response.IsSuccessStatusCode ? true : false;
+        }
+
+        public bool DeleteReceta(Receta receta)
+        {
+            var response = HttpClient.DeleteAsync($"deleteReceta/{receta.Id}").Result;
+            return response.IsSuccessStatusCode ? true : false;
         }
     }
 }

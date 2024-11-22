@@ -34,6 +34,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xFcnJvci5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/DiSeven/Desktop/Proyectos .NET/RecipesNetCoreBlazor/WebAPIBlazor/WebAPIBlazor/Components/Pages/FichaReceta.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xGaWNoYVJlY2V0YS5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/DiSeven/Desktop/Proyectos .NET/RecipesNetCoreBlazor/WebAPIBlazor/WebAPIBlazor/Components/Pages/Index.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xJbmRleC5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 

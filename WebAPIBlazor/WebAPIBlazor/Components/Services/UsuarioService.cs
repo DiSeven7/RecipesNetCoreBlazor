@@ -1,37 +1,81 @@
-﻿using WebAPIBlazor.Components.DTO;
+﻿using Newtonsoft.Json;
+using WebAPIBlazor.Components.DTO;
 
 namespace WebAPIBlazor.Components.Services
 {
     public class UsuarioService : IUsuarioService
     {
-        public Task<bool> DeleteUsuario(Usuario usuario)
+        private HttpClient HttpClient { get; set; }
+
+        public UsuarioService(HttpClient httpClient)
         {
-            throw new NotImplementedException();
+            HttpClient = httpClient;
         }
 
         public Usuario GetUsuario(int id)
         {
-            throw new NotImplementedException();
+            var response = HttpClient.GetAsync($"getUsuario/{id}").Result;
+            if (response.IsSuccessStatusCode)
+            {
+                string json = response.Content.ReadAsStringAsync().Result;
+                var usuario = JsonConvert.DeserializeObject<Usuario>(json);
+
+                return usuario;
+            }
+            else
+            {
+                return null;
+            }
         }
 
         public List<Usuario> GetUsuarios()
         {
-            throw new NotImplementedException();
+            var response = HttpClient.GetAsync($"getUsuarios").Result;
+            if (response.IsSuccessStatusCode)
+            {
+                string json = response.Content.ReadAsStringAsync().Result;
+                var usuario = JsonConvert.DeserializeObject<List<Usuario>>(json);
+
+                return usuario;
+            }
+            else
+            {
+                return null;
+            }
         }
 
-        public Task<bool> Login(Usuario usuario)
+        public bool PostUsuario(Usuario usuario)
         {
-            throw new NotImplementedException();
+            var response = HttpClient.PostAsJsonAsync($"postUsuario", usuario).Result;
+            return response.IsSuccessStatusCode ? true : false;
         }
 
-        public Task<bool> PostUsuario(Usuario usuario)
+        public bool PutUsuario(Usuario usuario)
         {
-            throw new NotImplementedException();
+            var response = HttpClient.PutAsJsonAsync($"putUsuario/{usuario.Id}", usuario).Result;
+            return response.IsSuccessStatusCode ? true : false;
         }
 
-        public Task<bool> PutUsuario(Usuario usuario)
+        public bool DeleteUsuario(Usuario usuario)
         {
-            throw new NotImplementedException();
+            var response = HttpClient.DeleteAsync($"deleteUsuario/{usuario.Id}").Result;
+            return response.IsSuccessStatusCode ? true : false;
         }
+
+        public int Login(Usuario usuario)
+        {
+            var response = HttpClient.PostAsJsonAsync($"login", usuario).Result;
+            if (response.IsSuccessStatusCode)
+            {
+                string id = response.Content.ReadAsStringAsync().Result;
+
+                return int.Parse(id);
+            }
+            else
+            {
+                return -1;
+            }
+        }
+
     }
 }

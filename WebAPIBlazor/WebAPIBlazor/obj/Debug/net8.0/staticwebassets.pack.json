@@ -5,8 +5,16 @@
       "PackagePath": "staticwebassets\\WebAPIBlazor.bundle.scp.css"
     },
     {
+      "Id": "C:\\Users\\DiSeven\\Desktop\\Proyectos .NET\\RecipesNetCoreBlazor\\WebAPIBlazor\\WebAPIBlazor\\wwwroot\\404.png",
+      "PackagePath": "staticwebassets\\404.png"
+    },
+    {
       "Id": "C:\\Users\\DiSeven\\Desktop\\Proyectos .NET\\RecipesNetCoreBlazor\\WebAPIBlazor\\WebAPIBlazor\\wwwroot\\app.css",
       "PackagePath": "staticwebassets\\app.css"
+    },
+    {
+      "Id": "C:\\Users\\DiSeven\\Desktop\\Proyectos .NET\\RecipesNetCoreBlazor\\WebAPIBlazor\\WebAPIBlazor\\wwwroot\\vacio.png",
+      "PackagePath": "staticwebassets\\vacio.png"
     },
     {
       "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.WebAPIBlazor.Microsoft.AspNetCore.StaticWebAssets.props",
