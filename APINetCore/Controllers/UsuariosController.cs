@@ -121,6 +121,7 @@ namespace PruebasAPIBlazor.Controllers
                 return BadRequest();
             }
 
+            usuario.Contraseña = PasswordHelpers.Encrypt(usuario.Contraseña, _config.GetSection("Salt").Value);
             _context.Entry(usuario).State = EntityState.Modified;
 
             try

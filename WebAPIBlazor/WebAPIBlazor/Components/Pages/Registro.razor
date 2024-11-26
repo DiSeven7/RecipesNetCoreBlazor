@@ -1,0 +1,24 @@
+﻿@page "/registro"
+@rendermode InteractiveServer
+<PageTitle>Iniciar sesión</PageTitle>
+<div class="row">
+    <div class="col-sm-4">&nbsp;</div>
+    <div class="col-sm-4">
+        <h3 class="mt-4 mb-4" style="color:darkolivegreen;font-weight:bold">Registro</h3>
+        <EditForm Model="Usuario" FormName="Login" OnSubmit="RegistrarUsuario">
+            <DataAnnotationsValidator />
+            <label class="form-label">Email</label><br />
+            <InputText @bind-Value="Usuario.Email" class="form-control"></InputText><br />
+            <label class="form-label">Contraseña</label><br />
+            <InputText type="password" minlength="6" @bind-Value="Usuario.Contraseña" class="form-control"></InputText><br />
+            <label class="form-label">Repetir contraseña</label><br />
+            <InputText type="password" minlength="6" @bind-Value="ConfirmacionContraseña" class="form-control"></InputText><br />
+            <button type="submit" class="btn btn-submit" style="background-color:darkolivegreen;color:white">Registrarse</button>
+        </EditForm>
+        @if (RegistroIncorrecto)
+        {
+            <div class="alert alert-danger mt-4 mb-4">@MensajeError</div>
+        }
+    </div>
+    <div class="col-sm-4">&nbsp;</div>
+</div>

@@ -1,11 +1,16 @@
-﻿namespace WebAPIBlazor.Components.DTO
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace WebAPIBlazor.Components.DTO
 {
     public class Usuario
     {
         public int Id { get; set; }
 
+        [Required(ErrorMessage = "El campo email es obligatorio")]
         public string Email { get; set; }
 
+        [Required(ErrorMessage = "El campo contraseña es obligatorio")]
+        [Length(6, 500, ErrorMessage = "La contraseña debe tener entre 6 y 50 caracteres")]
         public string Contraseña { get; set; }
 
         public bool Verificado { get; set; } = false;

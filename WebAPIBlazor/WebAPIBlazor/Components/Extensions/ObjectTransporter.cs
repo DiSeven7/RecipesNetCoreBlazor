@@ -19,8 +19,16 @@
 
         public object RetrieveData(string key)
         {
-            var data = StoredData.First(x => x.Key.Equals(key)).Value;
+            var data = StoredData.ContainsKey(key) ? StoredData.First(x => x.Key.Equals(key)).Value : null;
             return data;
+        }
+
+        public void RemoveData(string key)
+        {
+            if (StoredData.ContainsKey(key))
+            {
+                StoredData.Remove(key);
+            }
         }
     }
 }

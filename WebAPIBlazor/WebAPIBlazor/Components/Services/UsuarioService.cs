@@ -1,5 +1,6 @@
 ﻿using Newtonsoft.Json;
 using WebAPIBlazor.Components.DTO;
+using WebAPIBlazor.Components.Extensions;
 
 namespace WebAPIBlazor.Components.Services
 {
@@ -7,9 +8,12 @@ namespace WebAPIBlazor.Components.Services
     {
         private HttpClient HttpClient { get; set; }
 
-        public UsuarioService(HttpClient httpClient)
+        private ConfigurationManager Configuration { get; set; }
+
+        public UsuarioService(HttpClient httpClient, ConfigurationManager configuration)
         {
             HttpClient = httpClient;
+            Configuration = configuration;
         }
 
         public Usuario GetUsuario(int id)

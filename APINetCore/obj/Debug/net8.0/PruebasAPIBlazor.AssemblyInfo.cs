@@ -15,7 +15,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("PruebasAPIBlazor")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+edf3b026cddd5e499abfe792acdb9ac15f0efd96")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3006f870d5694bcd6c8e5f9fd4dabfc0646375b1")]
 [assembly: System.Reflection.AssemblyProductAttribute("PruebasAPIBlazor")]
 [assembly: System.Reflection.AssemblyTitleAttribute("PruebasAPIBlazor")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
