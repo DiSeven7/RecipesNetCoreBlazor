@@ -13,7 +13,10 @@
             <InputText type="password" minlength="6" @bind-Value="Usuario.Contraseña" class="form-control"></InputText><br />
             <label class="form-label">Repetir contraseña</label><br />
             <InputText type="password" minlength="6" @bind-Value="ConfirmacionContraseña" class="form-control"></InputText><br />
-            <button type="submit" class="btn btn-submit" style="background-color:darkolivegreen;color:white">Registrarse</button>
+            <button type="submit" class="btn btn-submit" style="background-color:darkolivegreen;color:white">Registrarse</button><br />
+            <ValidationMessage For="()=> Usuario.Email" />
+            <ValidationMessage For="()=> Usuario.Contraseña" />
+            <ValidationMessage For="()=> ConfirmacionContraseña"/>
         </EditForm>
         @if (RegistroIncorrecto)
         {

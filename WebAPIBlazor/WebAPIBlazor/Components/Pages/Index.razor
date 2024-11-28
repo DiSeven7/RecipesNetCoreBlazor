@@ -7,11 +7,18 @@
         <h2 class="text text-center">Últimas recetas añadidas</h2>
         @for (int i = 1; i < 4; i++)
         {
-            <div class="card flex-row mt-2" style="width:100%">
+            <div class="card flex-row mt-2" style="width:100%;background-color:#f7f7f7">
                 <img class="card-img-sm-left" src="@Recetas.ElementAt(Recetas.Count-i).Imagen" alt="Receta hecha" style="height:auto;width:25%">
-                <div class="card-body">
+                <div class="card-body" style="width:75%">
                     <h5 class="card-title">@Recetas.ElementAt(Recetas.Count - i).NombreReceta</h5>
-                    <p class="card-text">@Recetas.ElementAt(Recetas.Count - i).Descripcion.Substring(0, 150)...</p>
+                    @if (Recetas.ElementAt(Recetas.Count - i).Descripcion.Length >= 150)
+                    {
+                        <p class="card-text">@Recetas.ElementAt(Recetas.Count - i).Descripcion.Substring(0, 150)...</p>
+                    }
+                    else
+                    {
+                        <p class="card-text">@Recetas.ElementAt(Recetas.Count - i).Descripcion</p>
+                    }
                     <a href="/receta/@Recetas.ElementAt(Recetas.Count-i).Id" class="btn btn-success">Ver receta completa</a>
                 </div>
             </div>
@@ -23,10 +30,17 @@
         @for (int i = 0; i < 3; i++)
         {
             int random = GetRecetaRandom();
-            <div class="card flex-row mt-2" style="width:100%">
-                <div class="card-body">
+            <div class="card flex-row mt-2" style="width:100%;background-color:#f7f7f7">
+                <div class="card-body" style="width:75%">
                     <h5 class="card-title">@Recetas.ElementAt(random).NombreReceta</h5>
-                    <p class="card-text">@Recetas.ElementAt(random).Descripcion.Substring(0, 50)...</p>
+                    @if (@Recetas.ElementAt(random).Descripcion.Length >= 50)
+                    {
+                        <p class="card-text">@Recetas.ElementAt(random).Descripcion.Substring(0, 50)...</p>
+                    }
+                    else
+                    {
+                        <p class="card-text">@Recetas.ElementAt(random).Descripcion</p>
+                    }
                     <a href="/receta/@Recetas.ElementAt(random).Id" class="btn btn-success">Ver receta completa</a>
                 </div>
                 <img class="card-img-sm-right" src="@Recetas.ElementAt(random).Imagen" alt="Receta hecha" style="height:auto;width:25%">

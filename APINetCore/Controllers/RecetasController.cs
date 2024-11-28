@@ -30,7 +30,7 @@ namespace PruebasAPIBlazor.Controllers
             _context.Recetas.Add(receta);
             await _context.SaveChangesAsync();
 
-            return Ok("Receta creada correctamente");
+            return Ok(_context.Recetas.First(x => x.NombreReceta.Equals(receta.NombreReceta) && x.Descripcion.Equals(receta.Descripcion) && x.Ingredientes.Equals(receta.Ingredientes)));
         }
 
         #endregion

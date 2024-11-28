@@ -14,7 +14,7 @@ namespace WebAPIBlazor.Components.Services
 
         Receta GetReceta(int id);
 
-        bool PostReceta(Receta receta);
+        Receta PostReceta(Receta receta);
 
         bool PutReceta(Receta receta);
 

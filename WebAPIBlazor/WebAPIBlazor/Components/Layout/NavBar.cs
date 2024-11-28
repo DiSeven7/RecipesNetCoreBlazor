@@ -19,18 +19,13 @@ namespace WebAPIBlazor.Components.Layout
 
         protected override void OnInitialized()
         {
-            base.OnInitialized();
             var data = ObjectTransporter.RetrieveData("id");
             if (data != null)
             {
                 id = (int)data;
+                StateHasChanged();
             }
-        }
-
-        private void CerrarSesion()
-        {
-            ObjectTransporter.RemoveData("id");
-            NavigationManager.NavigateTo("/");
+            base.OnInitialized();
         }
     }
 }

@@ -7,6 +7,7 @@ namespace WebAPIBlazor.Components.DTO
         public int Id { get; set; }
 
         [Required(ErrorMessage = "El campo email es obligatorio")]
+        [EmailAddress(ErrorMessage = "El email indicado no es válido")]
         public string Email { get; set; }
 
         [Required(ErrorMessage = "El campo contraseña es obligatorio")]

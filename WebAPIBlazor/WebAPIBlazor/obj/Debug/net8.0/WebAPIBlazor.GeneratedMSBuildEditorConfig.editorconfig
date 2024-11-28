@@ -30,6 +30,18 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xMYXlvdXRcTmF2QmFyLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/DiSeven/Desktop/Proyectos .NET/RecipesNetCoreBlazor/WebAPIBlazor/WebAPIBlazor/Components/Pages/BorrarReceta.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xCb3JyYXJSZWNldGEucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/DiSeven/Desktop/Proyectos .NET/RecipesNetCoreBlazor/WebAPIBlazor/WebAPIBlazor/Components/Pages/CreadorReceta.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xDcmVhZG9yUmVjZXRhLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/DiSeven/Desktop/Proyectos .NET/RecipesNetCoreBlazor/WebAPIBlazor/WebAPIBlazor/Components/Pages/EditorReceta.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xFZGl0b3JSZWNldGEucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/DiSeven/Desktop/Proyectos .NET/RecipesNetCoreBlazor/WebAPIBlazor/WebAPIBlazor/Components/Pages/Error.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xFcnJvci5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
@@ -44,6 +56,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/DiSeven/Desktop/Proyectos .NET/RecipesNetCoreBlazor/WebAPIBlazor/WebAPIBlazor/Components/Pages/Login.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xMb2dpbi5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/DiSeven/Desktop/Proyectos .NET/RecipesNetCoreBlazor/WebAPIBlazor/WebAPIBlazor/Components/Pages/Perfil.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xQZXJmaWwucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/DiSeven/Desktop/Proyectos .NET/RecipesNetCoreBlazor/WebAPIBlazor/WebAPIBlazor/Components/Pages/Registro.razor]

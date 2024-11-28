@@ -1,0 +1,85 @@
+﻿@page "/perfil"
+@rendermode InteractiveServer
+<PageTitle>Mi perfil</PageTitle>
+<div class="row">
+    <div class="col-sm-2">&nbsp;</div>
+    <div class="col-sm-2 d-flex flex-row">
+        <div class="card mt-2 mb-2" style="background-color:#f7f7f7">
+            <div class="card-body">
+                <h4 style="color:darkolivegreen;font-weight:bold;margin-bottom:3%">Mi perfil</h4>
+                <button class="btn btn-success mt-4" style="color:white" @onclick="MuestraDatos">Mis datos</button>
+                <button class="btn btn-success mt-2" style="color:white" @onclick="MuestraRecetas">Mis recetas</button>
+                <a href="nuevaReceta"><button class="btn btn-primary mt-4" style="color:white">Nueva receta</button></a>
+                <button class="btn btn-danger mt-4" style="color:white" @onclick="CerrarSesion">Cerrar sesión</button>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm">&nbsp;</div>
+    <div class="col-sm-5">
+        <div class="card-body">
+            @if (!VerRecetas)
+            {
+                <h4 style="color:darkolivegreen;font-weight:bold;margin-bottom:3%;text-align:center">Mis datos</h4>
+                <label class="form-label" style="font-weight:bold">Email</label>
+
+                <br />
+                <input type="text" class="form-control" readonly value="@Usuario.Email" />
+
+                <br />
+                <h4 style="color:darkolivegreen;font-weight:bold;margin-bottom:3%">Modificar contraseña</h4>
+                <form method="post" @onsubmit="CambiarContraseña">
+                    <label class="form-label" style="font-weight:bold">Contraseña actual</label><br />
+                    <input type="password" class="form-control" required @bind-value="ContraseñaActual"></input><br />
+                    <label class="form-label" style="font-weight:bold">Nueva contraseña</label><br />
+                    <input type="password" class="form-control" required @bind-value="NuevaContraseña"></input><br />
+                    <button type="submit" class="btn btn-success">Modificar</button><br />
+                </form>
+                @if (Modificado)
+                {
+                    <div class="alert alert-success mt-4">Contraseña modificada correctamente</div>
+                }
+                @if (HuboError)
+                {
+                    <div class="alert alert-danger mt-4">@MensajeError</div>
+                }
+            }
+            else
+            {
+                <h4 style="color:darkolivegreen;font-weight:bold;margin-bottom:3%;text-align:center">Mis recetas</h4>
+                <table class="table table-responsive">
+                    <thead>
+                        <tr>
+                            <th style="text-align:center">Nombre</th>
+                            <th style="text-align:center">Opciones</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @if (Recetas != null && Recetas.Count > 0)
+                        {
+                            @foreach (var receta in Recetas)
+                            {
+                                <tr>
+                                    <td style="text-align:center">
+                                        <span style="color:darkolivegreen;font-weight:bold">@receta.NombreReceta</span>
+                                    </td>
+                                    <td style="text-align:center">
+                                        <a href="editar/@receta.Id">
+                                            <button class="btn btn-primary" style="color:white">Editar</button>
+                                        </a>
+                                        <a href="receta/@receta.Id">
+                                            <button class="btn btn-success" style="color:white">Ver</button>
+                                        </a>
+                                        <a href="eliminar/@receta.Id">
+                                            <button class="btn btn-danger" style="color:white">Eliminar</button>
+                                        </a>
+                                    </td>
+                                </tr>
+                            }
+                        }
+                    </tbody>
+                </table>
+            }
+        </div>
+    </div>
+    <div class="col-sm-2">&nbsp;</div>
+</div>

@@ -1,0 +1,57 @@
+﻿@page "/editar/{Id:int}"
+@rendermode InteractiveServer
+<PageTitle>Editar receta</PageTitle>
+<div class="row">
+    <h2 style="color:darkolivegreen;font-weight:bold;margin-bottom:3%;text-align:center">Editar receta</h2>
+    <div class="col-sm-2">&nbsp;</div>
+    <div class="col-sm-8">
+        <EditForm Model="Receta" FormName="Editor" OnSubmit="EditarReceta">
+            <label class="form-label">Nombre receta:</label><br />
+            <InputText class="form-control" required @bind-Value="@Receta.NombreReceta"></InputText><br />
+            <label class="form-label">Ingredientes (uno por línea):</label><br />
+            <InputTextArea class="form-control" required @bind-Value="@Receta.Ingredientes" style="min-height:15vh"></InputTextArea><br />
+            <label class="form-label">Descripción:</label><br />
+            <InputTextArea class="form-control" required @bind-Value="@Receta.Descripcion" style="min-height:15vh"></InputTextArea><br />
+            <label class="form-label">Tiempo preparación (en minutos):</label><br />
+            <InputNumber class="form-control" required @bind-Value="@Receta.Tiempo"></InputNumber><br />
+            <label class="form-label">Url imagen:</label><br />
+            <InputText class="form-control" required @bind-Value="@Receta.Imagen"></InputText><br />
+            <label class="form-label">Categoría:</label><br />
+            <InputSelect class="form-select" required @bind-Value="@Receta.Categoria" @onchange="CambiaCategoria">
+                @foreach (DTO.Categoria categoria in Enum.GetValues(typeof(DTO.Categoria)))
+                {
+                    if (categoria.Equals(Receta.Categoria))
+                    {
+                        <option selected="selected" value="@categoria">@categoria</option>
+                    }
+                    else
+                    {
+                        <option value="@categoria">@categoria</option>
+                    }
+                }
+            </InputSelect><br />
+            <label class="form-label">Dificultad:</label><br />
+            <InputSelect class="form-select" required @bind-Value="@Receta.Dificultad" @onchange="CambiaDificultad">
+                @foreach (DTO.Dificultad dificultad in Enum.GetValues(typeof(DTO.Dificultad)))
+                {
+                    if (dificultad.Equals(Receta.Dificultad))
+                    {
+                        <option selected="selected" value="@dificultad">@dificultad</option>
+                    }
+                    else
+                    {
+                        <option value="@dificultad">@dificultad</option>
+                    }
+                }
+            </InputSelect><br />
+            <label class="form-label">Referencias (Enlaces consultados, uno por línea):</label><br />
+            <InputTextArea class="form-control" @bind-Value="@Receta.Referencias" style="min-height:15vh"></InputTextArea><br />
+            <button type="submit" class="btn btn-success" style="color:white">Guardar</button>
+        </EditForm>
+        @if (HuboError)
+        {
+            <div class="alert alert-danger mt-4 mb-4">@MensajeError</div>
+        }
+    </div>
+    <div class="col-sm-2">&nbsp;</div>
+</div>

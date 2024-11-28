@@ -93,10 +93,19 @@ namespace WebAPIBlazor.Components.Services
             }
         }
 
-        public bool PostReceta(Receta receta)
+        public Receta PostReceta(Receta receta)
         {
             var response = HttpClient.PostAsJsonAsync($"postReceta", receta).Result;
-            return response.IsSuccessStatusCode ? true : false;
+            if (response.IsSuccessStatusCode)
+            {
+                string json = response.Content.ReadAsStringAsync().Result;
+                return JsonConvert.DeserializeObject<Receta>(json);
+            }
+            else
+            {
+                var body = response.Content.ReadAsStringAsync().Result;
+                return null;
+            }
         }
 
         public bool PutReceta(Receta receta)

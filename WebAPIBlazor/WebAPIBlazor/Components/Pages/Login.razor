@@ -1,4 +1,4 @@
-﻿@page "/login"
+﻿@page "/login/{DesdeRegistro:?}"
 @rendermode InteractiveServer
 <PageTitle>Iniciar sesión</PageTitle>
 <div class="row">
@@ -8,18 +8,16 @@
         <EditForm Model="Usuario" FormName="Login" OnSubmit="IniciarSesion">
             <DataAnnotationsValidator />
             <label class="form-label">Email</label><br />
-            <InputText @bind-Value="Usuario.Email" class="form-control"></InputText>
-            <ValidationMessage style="z-index:auto !important" For="()=> Usuario.Email" />
-            <br />
-            <ValidationMessage For="()=> Usuario.Email" />
+            <InputText @bind-Value="Usuario.Email" class="form-control"></InputText><br />
             <label class="form-label">Contraseña</label><br />
             <InputText type="password" @bind-Value="Usuario.Contraseña" class="form-control"></InputText><br />
             <button type="submit" class="btn btn-submit" style="background-color:darkolivegreen;color:white">Iniciar sesión</button>
         </EditForm>
         <p class="mt-4 mb-4">¿Todavía no tienes cuenta? <a href="registro" style="color:darkgreen;font-weight:bold;text-decoration:none">Registro</a></p>
-        @if (SesionIncorrecta)
+        <div class="alert alert-danger mb-4" style="display:@DisplayError">Usuario o contraseña incorrectos</div>
+        @if (VieneDeRegistro)
         {
-            <div class="alert alert-danger mb-4">Usuario o contraseña incorrectos</div>
+            <div class="alert alert-success mb-4">Registro correcto. Inicia sesión para acceder a tu cuenta.</div>
         }
     </div>
     <div class="col-sm-4">&nbsp;</div>

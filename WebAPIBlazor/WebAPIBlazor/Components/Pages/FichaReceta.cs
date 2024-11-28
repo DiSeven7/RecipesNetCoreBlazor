@@ -6,14 +6,18 @@ namespace WebAPIBlazor.Components.Pages
 {
     public partial class FichaReceta : ComponentBase
     {
+
+        [Parameter]
+        public int Id { get; set; }
+
         [Inject]
         public IRecetaService RecetaService { get; set; }
 
         [Inject]
         public IUsuarioService UsuarioService { get; set; }
 
-        [Parameter]
-        public int Id { get; set; }
+        [Inject]
+        public NavigationManager NavigationManager { get; set; }
 
         public string Autor { get; set; }
 
@@ -22,9 +26,16 @@ namespace WebAPIBlazor.Components.Pages
         protected override void OnInitialized()
         {
             base.OnInitialized();
-            Receta = RecetaService.GetReceta(Id);
-            Autor = UsuarioService.GetUsuario(Receta.IdAutor).Email;
+            var objetivo = RecetaService.GetReceta(Id);
+            if (objetivo != null)
+            {
+                Receta = objetivo;
+                Autor = UsuarioService.GetUsuario(Receta.IdAutor).Email;
+            }
+            else
+            {
+                NavigationManager.NavigateTo("/");
+            }
         }
-
     }
 }

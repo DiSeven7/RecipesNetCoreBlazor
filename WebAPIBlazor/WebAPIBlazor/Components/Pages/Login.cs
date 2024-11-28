@@ -12,6 +12,9 @@ namespace WebAPIBlazor.Components.Pages
         [SupplyParameterFromForm]
         private Usuario Usuario { get; set; }
 
+        [Parameter]
+        public string? DesdeRegistro { get; set; }
+
         [Inject]
         public IUsuarioService UsuarioService { get; set; }
 
@@ -21,12 +24,25 @@ namespace WebAPIBlazor.Components.Pages
         [Inject]
         public ObjectTransporter ObjectTransporter { get; set; }
 
-        private bool SesionIncorrecta = false;
+        private string DisplayError = "none";
+
+        private bool VieneDeRegistro = false;
 
         protected override void OnInitialized()
         {
-            base.OnInitialized();
-            Usuario = new Usuario();
+            if (ObjectTransporter.RetrieveData("id") == null)
+            {
+                Usuario = new Usuario();
+                if (DesdeRegistro != null && DesdeRegistro.Equals("fromRegister"))
+                {
+                    VieneDeRegistro = true;
+                }
+                base.OnInitialized();
+            }
+            else
+            {
+                NavigationManager.NavigateTo("/perfil");
+            }
         }
 
         private void IniciarSesion()
@@ -36,11 +52,11 @@ namespace WebAPIBlazor.Components.Pages
             if (usuarioId != -1)
             {
                 ObjectTransporter.AddData("id", usuarioId);
-                NavigationManager.NavigateTo("/");
+                NavigationManager.NavigateTo("/", true);
             }
             else
             {
-                SesionIncorrecta = true;
+                DisplayError = "block";
             }
         }
 
