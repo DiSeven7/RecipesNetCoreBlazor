@@ -1145,3 +1145,8 @@ C:\Users\DiSeven\Desktop\Proyectos .NET\RecipesNetCoreBlazor\APINetCore\obj\Debu
 C:\Users\DiSeven\Desktop\Proyectos .NET\RecipesNetCoreBlazor\APINetCore\obj\Debug\net8.0\PruebasAPIBlazor.pdb
 C:\Users\DiSeven\Desktop\Proyectos .NET\RecipesNetCoreBlazor\APINetCore\obj\Debug\net8.0\PruebasAPIBlazor.genruntimeconfig.cache
 C:\Users\DiSeven\Desktop\Proyectos .NET\RecipesNetCoreBlazor\APINetCore\obj\Debug\net8.0\ref\PruebasAPIBlazor.dll
+C:\Users\DiSeven\Desktop\Proyectos .NET\RecipesNetCoreBlazor\APINetCore\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\DiSeven\Desktop\Proyectos .NET\RecipesNetCoreBlazor\APINetCore\bin\Debug\net8.0\PruebasAPIBlazor.staticwebassets.endpoints.json
+C:\Users\DiSeven\Desktop\Proyectos .NET\RecipesNetCoreBlazor\APINetCore\obj\Debug\net8.0\staticwebassets.build.endpoints.json
+C:\Users\DiSeven\Desktop\Proyectos .NET\RecipesNetCoreBlazor\APINetCore\obj\Debug\net8.0\staticwebassets\msbuild.PruebasAPIBlazor.Microsoft.AspNetCore.StaticWebAssetEndpoints.props
+C:\Users\DiSeven\Desktop\Proyectos .NET\RecipesNetCoreBlazor\APINetCore\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt

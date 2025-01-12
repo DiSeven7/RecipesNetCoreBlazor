@@ -10,7 +10,7 @@ namespace PruebasAPIBlazor.Context
 
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options)
         {
-            this.Database.Migrate();
+            //this.Database.Migrate();
         }
 
         public DbSet<Usuario> Usuarios { get; set; }

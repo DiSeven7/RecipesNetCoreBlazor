@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -23,7 +24,7 @@ namespace PruebasAPIBlazor.Controllers
 
         #region Post
 
-        // POST: api/Recetas/postReceta
+        [Authorize]
         [HttpPost("postReceta")]
         public async Task<ActionResult<Receta>> PostReceta(Receta receta)
         {
@@ -102,7 +103,7 @@ namespace PruebasAPIBlazor.Controllers
 
         #region Puts
 
-        // PUT: api/Recetas/putReceta/5
+        [Authorize]
         [HttpPut("putReceta/{id}")]
         public async Task<IActionResult> PutReceta(int id, Receta receta)
         {
@@ -136,7 +137,7 @@ namespace PruebasAPIBlazor.Controllers
 
         #region Delete
 
-        // DELETE: api/Recetas/deleteReceta/5
+        [Authorize]
         [HttpDelete("deleteReceta/{id}")]
         public async Task<IActionResult> DeleteReceta(int id)
         {

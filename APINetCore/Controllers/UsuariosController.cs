@@ -1,11 +1,16 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IdentityModel.Tokens.Jwt;
 using System.Linq;
+using System.Security.Claims;
+using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.IdentityModel.Tokens;
 using PruebasAPIBlazor.Context;
 using PruebasAPIBlazor.Helpers;
 using PruebasAPIBlazor.Models;
@@ -20,22 +25,32 @@ namespace PruebasAPIBlazor.Controllers
 
         private ConfigurationManager _config { get; set; }
 
-        public UsuariosController(ApplicationDbContext context, ConfigurationManager config)
+        private AuthenticationService _authenticationService;
+
+        public UsuariosController(ApplicationDbContext context, ConfigurationManager config, AuthenticationService authenticationService)
         {
             _context = context;
             _config = config;
+            _authenticationService = authenticationService;
         }
 
         #region Post
 
-        // POST: api/Usuarios/login
+        [Authorize]
         [HttpPost("login")]
         public async Task<ActionResult<int>> Login(Usuario usuario)
         {
             try
             {
-                Usuario objetivo = _context.Usuarios.First(x => x.Contraseña.Equals(PasswordHelpers.Encrypt(usuario.Contraseña, _config.GetSection("Salt").Value)) && x.Email.Equals(usuario.Email));
-                return Ok(objetivo.Id);
+                Usuario objetivo = _context.Usuarios.First(x => x.Contraseña.Equals(_authenticationService.Encrypt(usuario.Contraseña, _config.GetSection("Salt").Value)) && x.Email.Equals(usuario.Email));
+                if (objetivo.Verificado)
+                {
+                    return Ok(objetivo.Id);
+                }
+                else
+                {
+                    return BadRequest("Verifique su email antes de iniciar sesión");
+                }
             }
             catch (Exception ex)
             {
@@ -43,7 +58,7 @@ namespace PruebasAPIBlazor.Controllers
             }
         }
 
-        // POST: api/Usuarios/postUsuario
+        [Authorize]
         [HttpPost("postUsuario")]
         public async Task<ActionResult<Usuario>> PostUsuario(Usuario usuario)
         {
@@ -56,7 +71,7 @@ namespace PruebasAPIBlazor.Controllers
                         if (usuario.Verificado)
                         {
 
-                            usuario.Contraseña = PasswordHelpers.Encrypt(usuario.Contraseña, _config.GetSection("Salt").Value);
+                            usuario.Contraseña = _authenticationService.Encrypt(usuario.Contraseña, _config.GetSection("Salt").Value);
                             _context.Usuarios.Add(usuario);
                             await _context.SaveChangesAsync();
 
@@ -83,18 +98,44 @@ namespace PruebasAPIBlazor.Controllers
             }
         }
 
+        [HttpPost("token")]
+        public IActionResult Token(string email, string contraseña)
+        {
+            Usuario objetivo = null;
+            try
+            {
+                objetivo = _context.Usuarios.First(x => x.Contraseña.Equals(_authenticationService.Encrypt(contraseña, _config.GetSection("Salt").Value)) && x.Email.Equals(email));
+                if (!objetivo.Verificado)
+                {
+                    objetivo = null;
+                }
+            }
+            catch
+            {
+                objetivo = null;
+            }
+
+            if (objetivo == null)
+                return Unauthorized("Credenciales de usuario no válidas o usuario no verificado");
+
+            // Generate JWT token
+            var token = _authenticationService.CreateJwtToken(_config, objetivo.Id);
+
+            return Ok(new { token });
+        }
+
         #endregion
 
         #region Gets
 
-        // GET: api/getUsuarios
+        [Authorize]
         [HttpGet("getUsuarios")]
         public async Task<ActionResult<IEnumerable<Usuario>>> GetUsuarios()
         {
             return Ok(await _context.Usuarios.ToListAsync());
         }
 
-        // GET: api/Usuarios/getUsuario/5
+        [Authorize]
         [HttpGet("getUsuario/{id}")]
         public async Task<ActionResult<Usuario>> GetUsuario(int id)
         {
@@ -112,7 +153,7 @@ namespace PruebasAPIBlazor.Controllers
 
         #region Puts
 
-        // PUT: api/Usuarios/putUsuario/5
+        [Authorize]
         [HttpPut("putUsuario/{id}")]
         public async Task<IActionResult> PutUsuario(int id, Usuario usuario)
         {
@@ -121,7 +162,7 @@ namespace PruebasAPIBlazor.Controllers
                 return BadRequest();
             }
 
-            usuario.Contraseña = PasswordHelpers.Encrypt(usuario.Contraseña, _config.GetSection("Salt").Value);
+            usuario.Contraseña = _authenticationService.Encrypt(usuario.Contraseña, _config.GetSection("Salt").Value);
             _context.Entry(usuario).State = EntityState.Modified;
 
             try
@@ -147,7 +188,7 @@ namespace PruebasAPIBlazor.Controllers
 
         #region Deletes
 
-        // DELETE: api/Usuarios/deleteUsuario/5
+        [Authorize]
         [HttpDelete("deleteUsuario/{id}")]
         public async Task<IActionResult> DeleteUsuario(int id)
         {
@@ -165,7 +206,7 @@ namespace PruebasAPIBlazor.Controllers
 
         #endregion
 
-        #region Helpers
+        #region Funciones
 
         private bool UsuarioExists(int id)
         {

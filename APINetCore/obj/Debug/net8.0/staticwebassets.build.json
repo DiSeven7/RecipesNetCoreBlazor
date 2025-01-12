@@ -1,11 +1,12 @@
 {
   "Version": 1,
-  "Hash": "9etomP9SDi5yKA/lad5UdiuRvM8kfGZxjIQSaHnvmbo=",
+  "Hash": "hy5m36+Ixk/HNWBWVowCa7OBy5b3TySTsfbQatVD4Uc=",
   "Source": "PruebasAPIBlazor",
   "BasePath": "_content/PruebasAPIBlazor",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [],
   "DiscoveryPatterns": [],
-  "Assets": []
+  "Assets": [],
+  "Endpoints": []
 }

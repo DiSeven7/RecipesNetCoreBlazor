@@ -2,7 +2,7 @@
   "Files": [
     {
       "Id": "C:\\Users\\DiSeven\\Desktop\\Proyectos .NET\\RecipesNetCoreBlazor\\WebAPIBlazor\\WebAPIBlazor\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\WebAPIBlazor.bundle.scp.css",
-      "PackagePath": "staticwebassets\\WebAPIBlazor.bundle.scp.css"
+      "PackagePath": "staticwebassets\\WebAPIBlazor.i8cscad1le.bundle.scp.css"
     },
     {
       "Id": "C:\\Users\\DiSeven\\Desktop\\Proyectos .NET\\RecipesNetCoreBlazor\\WebAPIBlazor\\WebAPIBlazor\\wwwroot\\404.png",
@@ -15,6 +15,10 @@
     {
       "Id": "C:\\Users\\DiSeven\\Desktop\\Proyectos .NET\\RecipesNetCoreBlazor\\WebAPIBlazor\\WebAPIBlazor\\wwwroot\\vacio.png",
       "PackagePath": "staticwebassets\\vacio.png"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.WebAPIBlazor.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssetEndpoints.props"
     },
     {
       "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.WebAPIBlazor.Microsoft.AspNetCore.StaticWebAssets.props",

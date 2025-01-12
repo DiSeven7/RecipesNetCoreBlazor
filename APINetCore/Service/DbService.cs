@@ -6,16 +6,19 @@ using System.Text;
 
 namespace PruebasAPIBlazor.Helpers
 {
-    public class DbSeeder
+    public class DbService
     {
         public ApplicationDbContext _context { get; set; }
 
         public ConfigurationManager _configuration { get; set; }
 
-        public DbSeeder(ApplicationDbContext context, ConfigurationManager configuration)
+        public AuthenticationService _authenticationService { get; set; }
+
+        public DbService(ApplicationDbContext context, ConfigurationManager configuration, AuthenticationService authenticationService)
         {
             _context = context;
             _configuration = configuration;
+            _authenticationService = authenticationService;
         }
 
         public void SeedUsuarios()
@@ -26,7 +29,7 @@ namespace PruebasAPIBlazor.Helpers
                 {
                     Id = 0,
                     Email = "admin@admin.com",
-                    Contraseña = PasswordHelpers.Encrypt("admin2024", _configuration.GetSection("Salt").Value),
+                    Contraseña = _authenticationService.Encrypt("admin2024", _configuration.GetSection("Salt").Value),
                     Verificado = true
                 };
                 _context.Usuarios.Add(usuario);

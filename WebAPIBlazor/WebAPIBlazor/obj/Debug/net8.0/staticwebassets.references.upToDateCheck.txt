@@ -1,0 +1,2 @@
+C:\Users\DiSeven\Desktop\Proyectos .NET\RecipesNetCoreBlazor\WebAPIBlazor\WebAPIBlazor.Client\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\DiSeven\Desktop\Proyectos .NET\RecipesNetCoreBlazor\WebAPIBlazor\WebAPIBlazor.Client\obj\Debug\net8.0\staticwebassets.build.json

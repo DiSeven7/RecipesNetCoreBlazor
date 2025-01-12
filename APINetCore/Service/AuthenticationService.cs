@@ -1,11 +1,14 @@
-﻿using System.Security.Cryptography;
+﻿using Microsoft.IdentityModel.Tokens;
+using System.IdentityModel.Tokens.Jwt;
+using System.Security.Claims;
+using System.Security.Cryptography;
 using System.Text;
 
 namespace PruebasAPIBlazor.Helpers
 {
-    static class PasswordHelpers
+    public class AuthenticationService
     {
-        public static string Encrypt(string encryptString, string passKey)
+        public string Encrypt(string encryptString, string passKey)
         {
             byte[] clearBytes = Encoding.Unicode.GetBytes(encryptString);
             using (Aes encryptor = Aes.Create())
@@ -26,6 +29,20 @@ namespace PruebasAPIBlazor.Helpers
                 }
             }
             return encryptString;
+        }
+
+        public string CreateJwtToken(ConfigurationManager _config, int userId)
+        {
+            var tokenHandler = new JwtSecurityTokenHandler();
+            var key = Encoding.ASCII.GetBytes(_config.GetSection("JWTKey").Value);
+            var tokenDescriptor = new SecurityTokenDescriptor
+            {
+                Subject = new ClaimsIdentity(new[] { new Claim("id", userId.ToString()) }),
+                Expires = DateTime.UtcNow.AddDays(7),
+                SigningCredentials = new SigningCredentials(new SymmetricSecurityKey(key), SecurityAlgorithms.HmacSha256Signature)
+            };
+            var token = tokenHandler.CreateToken(tokenDescriptor);
+            return tokenHandler.WriteToken(token);
         }
     }
 }

@@ -231,3 +231,8 @@ C:\Users\DiSeven\Desktop\Proyectos .NET\RecipesNetCoreBlazor\WebAPIBlazor\WebAPI
 C:\Users\DiSeven\Desktop\Proyectos .NET\RecipesNetCoreBlazor\WebAPIBlazor\WebAPIBlazor\obj\Debug\net8.0\WebAPIBlazor.pdb
 C:\Users\DiSeven\Desktop\Proyectos .NET\RecipesNetCoreBlazor\WebAPIBlazor\WebAPIBlazor\obj\Debug\net8.0\WebAPIBlazor.genruntimeconfig.cache
 C:\Users\DiSeven\Desktop\Proyectos .NET\RecipesNetCoreBlazor\WebAPIBlazor\WebAPIBlazor\obj\Debug\net8.0\ref\WebAPIBlazor.dll
+C:\Users\DiSeven\Desktop\Proyectos .NET\RecipesNetCoreBlazor\WebAPIBlazor\WebAPIBlazor\bin\Debug\net8.0\WebAPIBlazor.Client.staticwebassets.endpoints.json
+C:\Users\DiSeven\Desktop\Proyectos .NET\RecipesNetCoreBlazor\WebAPIBlazor\WebAPIBlazor\bin\Debug\net8.0\WebAPIBlazor.staticwebassets.endpoints.json
+C:\Users\DiSeven\Desktop\Proyectos .NET\RecipesNetCoreBlazor\WebAPIBlazor\WebAPIBlazor\obj\Debug\net8.0\staticwebassets.build.endpoints.json
+C:\Users\DiSeven\Desktop\Proyectos .NET\RecipesNetCoreBlazor\WebAPIBlazor\WebAPIBlazor\obj\Debug\net8.0\staticwebassets\msbuild.WebAPIBlazor.Microsoft.AspNetCore.StaticWebAssetEndpoints.props
+C:\Users\DiSeven\Desktop\Proyectos .NET\RecipesNetCoreBlazor\WebAPIBlazor\WebAPIBlazor\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
