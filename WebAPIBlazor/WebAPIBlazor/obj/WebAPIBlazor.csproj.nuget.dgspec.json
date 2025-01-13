@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\DiSeven\\Desktop\\Proyectos .NET\\RecipesNetCoreBlazor\\WebAPIBlazor\\WebAPIBlazor\\WebAPIBlazor.csproj": {}
+    "C:\\Users\\David\\Desktop\\Proyectos .NET\\RecipesNetCoreBlazor\\WebAPIBlazor\\WebAPIBlazor\\WebAPIBlazor.csproj": {}
   },
   "projects": {
-    "C:\\Users\\DiSeven\\Desktop\\Proyectos .NET\\RecipesNetCoreBlazor\\WebAPIBlazor\\WebAPIBlazor.Client\\WebAPIBlazor.Client.csproj": {
+    "C:\\Users\\David\\Desktop\\Proyectos .NET\\RecipesNetCoreBlazor\\WebAPIBlazor\\WebAPIBlazor.Client\\WebAPIBlazor.Client.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\DiSeven\\Desktop\\Proyectos .NET\\RecipesNetCoreBlazor\\WebAPIBlazor\\WebAPIBlazor.Client\\WebAPIBlazor.Client.csproj",
+        "projectUniqueName": "C:\\Users\\David\\Desktop\\Proyectos .NET\\RecipesNetCoreBlazor\\WebAPIBlazor\\WebAPIBlazor.Client\\WebAPIBlazor.Client.csproj",
         "projectName": "WebAPIBlazor.Client",
-        "projectPath": "C:\\Users\\DiSeven\\Desktop\\Proyectos .NET\\RecipesNetCoreBlazor\\WebAPIBlazor\\WebAPIBlazor.Client\\WebAPIBlazor.Client.csproj",
-        "packagesPath": "C:\\Users\\DiSeven\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\DiSeven\\Desktop\\Proyectos .NET\\RecipesNetCoreBlazor\\WebAPIBlazor\\WebAPIBlazor.Client\\obj\\",
+        "projectPath": "C:\\Users\\David\\Desktop\\Proyectos .NET\\RecipesNetCoreBlazor\\WebAPIBlazor\\WebAPIBlazor.Client\\WebAPIBlazor.Client.csproj",
+        "packagesPath": "C:\\Users\\David\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\David\\Desktop\\Proyectos .NET\\RecipesNetCoreBlazor\\WebAPIBlazor\\WebAPIBlazor.Client\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\DiSeven\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\David\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -98,20 +98,20 @@
         }
       }
     },
-    "C:\\Users\\DiSeven\\Desktop\\Proyectos .NET\\RecipesNetCoreBlazor\\WebAPIBlazor\\WebAPIBlazor\\WebAPIBlazor.csproj": {
+    "C:\\Users\\David\\Desktop\\Proyectos .NET\\RecipesNetCoreBlazor\\WebAPIBlazor\\WebAPIBlazor\\WebAPIBlazor.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\DiSeven\\Desktop\\Proyectos .NET\\RecipesNetCoreBlazor\\WebAPIBlazor\\WebAPIBlazor\\WebAPIBlazor.csproj",
+        "projectUniqueName": "C:\\Users\\David\\Desktop\\Proyectos .NET\\RecipesNetCoreBlazor\\WebAPIBlazor\\WebAPIBlazor\\WebAPIBlazor.csproj",
         "projectName": "WebAPIBlazor",
-        "projectPath": "C:\\Users\\DiSeven\\Desktop\\Proyectos .NET\\RecipesNetCoreBlazor\\WebAPIBlazor\\WebAPIBlazor\\WebAPIBlazor.csproj",
-        "packagesPath": "C:\\Users\\DiSeven\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\DiSeven\\Desktop\\Proyectos .NET\\RecipesNetCoreBlazor\\WebAPIBlazor\\WebAPIBlazor\\obj\\",
+        "projectPath": "C:\\Users\\David\\Desktop\\Proyectos .NET\\RecipesNetCoreBlazor\\WebAPIBlazor\\WebAPIBlazor\\WebAPIBlazor.csproj",
+        "packagesPath": "C:\\Users\\David\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\David\\Desktop\\Proyectos .NET\\RecipesNetCoreBlazor\\WebAPIBlazor\\WebAPIBlazor\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\DiSeven\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\David\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -126,8 +126,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\DiSeven\\Desktop\\Proyectos .NET\\RecipesNetCoreBlazor\\WebAPIBlazor\\WebAPIBlazor.Client\\WebAPIBlazor.Client.csproj": {
-                "projectPath": "C:\\Users\\DiSeven\\Desktop\\Proyectos .NET\\RecipesNetCoreBlazor\\WebAPIBlazor\\WebAPIBlazor.Client\\WebAPIBlazor.Client.csproj"
+              "C:\\Users\\David\\Desktop\\Proyectos .NET\\RecipesNetCoreBlazor\\WebAPIBlazor\\WebAPIBlazor.Client\\WebAPIBlazor.Client.csproj": {
+                "projectPath": "C:\\Users\\David\\Desktop\\Proyectos .NET\\RecipesNetCoreBlazor\\WebAPIBlazor\\WebAPIBlazor.Client\\WebAPIBlazor.Client.csproj"
               }
             }
           }

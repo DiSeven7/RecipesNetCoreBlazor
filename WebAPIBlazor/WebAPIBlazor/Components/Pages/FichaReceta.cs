@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Components;
 using WebAPIBlazor.Components.DTO;
+using WebAPIBlazor.Components.Extensions;
 using WebAPIBlazor.Components.Services;
 
 namespace WebAPIBlazor.Components.Pages
@@ -17,6 +18,9 @@ namespace WebAPIBlazor.Components.Pages
         public IUsuarioService UsuarioService { get; set; }
 
         [Inject]
+        public ObjectTransporter ObjectTransporter { get; set; }
+
+        [Inject]
         public NavigationManager NavigationManager { get; set; }
 
         public string Autor { get; set; }
@@ -30,7 +34,7 @@ namespace WebAPIBlazor.Components.Pages
             if (objetivo != null)
             {
                 Receta = objetivo;
-                Autor = UsuarioService.GetUsuario(Receta.IdAutor).Email;
+                Autor = "admin";
             }
             else
             {

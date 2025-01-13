@@ -1,16 +1,24 @@
 ﻿using Newtonsoft.Json;
 using System.Net.Http.Headers;
 using WebAPIBlazor.Components.DTO;
+using WebAPIBlazor.Components.Extensions;
 
 namespace WebAPIBlazor.Components.Services
 {
     public class RecetaService : IRecetaService
     {
+        private ObjectTransporter ObjectTransporter { get; set; }
+
         private HttpClient HttpClient { get; set; }
 
-        public RecetaService(HttpClient httpClient)
+        public RecetaService(ObjectTransporter objectTransporter, HttpClient httpClient)
         {
+            ObjectTransporter = objectTransporter;
             HttpClient = httpClient;
+            if (ObjectTransporter.RetrieveData("token") != null)
+            {
+                HttpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", ObjectTransporter.RetrieveData("token").ToString());
+            }
         }
 
         public Receta GetReceta(int id)
@@ -93,8 +101,9 @@ namespace WebAPIBlazor.Components.Services
             }
         }
 
-        public Receta PostReceta(Receta receta)
+        public Receta PostReceta(Receta receta, string token)
         {
+            HttpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", token);
             var response = HttpClient.PostAsJsonAsync($"postReceta", receta).Result;
             if (response.IsSuccessStatusCode)
             {
@@ -108,14 +117,16 @@ namespace WebAPIBlazor.Components.Services
             }
         }
 
-        public bool PutReceta(Receta receta)
+        public bool PutReceta(Receta receta, string token)
         {
+            HttpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", token);
             var response = HttpClient.PutAsJsonAsync($"putReceta/{receta.Id}", receta).Result;
             return response.IsSuccessStatusCode ? true : false;
         }
 
-        public bool DeleteReceta(Receta receta)
+        public bool DeleteReceta(Receta receta, string token)
         {
+            HttpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", token);
             var response = HttpClient.DeleteAsync($"deleteReceta/{receta.Id}").Result;
             return response.IsSuccessStatusCode ? true : false;
         }

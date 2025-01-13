@@ -47,16 +47,20 @@ namespace WebAPIBlazor.Components.Pages
 
         private void IniciarSesion()
         {
-            Usuario.Id = 0;
-            var usuarioId = UsuarioService.Login(Usuario);
-            if (usuarioId != -1)
+            var token = UsuarioService.ObtenerToken(Usuario);
+            if (token != null)
             {
-                ObjectTransporter.AddData("id", usuarioId);
-                NavigationManager.NavigateTo("/", true);
-            }
-            else
-            {
-                DisplayError = "block";
+                ObjectTransporter.AddData("token", token);
+                var usuarioId = UsuarioService.Login(Usuario, token);
+                if (usuarioId != -1)
+                {
+                    ObjectTransporter.AddData("id", usuarioId);
+                    NavigationManager.NavigateTo("/", true);
+                }
+                else
+                {
+                    DisplayError = "block";
+                }
             }
         }
 

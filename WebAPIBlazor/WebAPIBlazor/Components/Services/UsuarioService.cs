@@ -1,4 +1,6 @@
-﻿using Newtonsoft.Json;
+﻿using System.Net.Http.Headers;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 using WebAPIBlazor.Components.DTO;
 using WebAPIBlazor.Components.Extensions;
 
@@ -6,7 +8,7 @@ namespace WebAPIBlazor.Components.Services
 {
     public class UsuarioService : IUsuarioService
     {
-        private HttpClient HttpClient { get; set; }
+        public HttpClient HttpClient { get; set; }
 
         private ConfigurationManager Configuration { get; set; }
 
@@ -16,8 +18,9 @@ namespace WebAPIBlazor.Components.Services
             Configuration = configuration;
         }
 
-        public Usuario GetUsuario(int id)
+        public Usuario GetUsuario(int id, string token)
         {
+            HttpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", token);
             var response = HttpClient.GetAsync($"getUsuario/{id}").Result;
             if (response.IsSuccessStatusCode)
             {
@@ -32,8 +35,9 @@ namespace WebAPIBlazor.Components.Services
             }
         }
 
-        public List<Usuario> GetUsuarios()
+        public List<Usuario> GetUsuarios(string token)
         {
+            HttpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", token);
             var response = HttpClient.GetAsync($"getUsuarios").Result;
             if (response.IsSuccessStatusCode)
             {
@@ -54,20 +58,23 @@ namespace WebAPIBlazor.Components.Services
             return response.IsSuccessStatusCode ? true : false;
         }
 
-        public bool PutUsuario(Usuario usuario)
+        public bool PutUsuario(Usuario usuario, string token)
         {
+            HttpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", token);
             var response = HttpClient.PutAsJsonAsync($"putUsuario/{usuario.Id}", usuario).Result;
             return response.IsSuccessStatusCode ? true : false;
         }
 
-        public bool DeleteUsuario(Usuario usuario)
+        public bool DeleteUsuario(Usuario usuario, string token)
         {
+            HttpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", token);
             var response = HttpClient.DeleteAsync($"deleteUsuario/{usuario.Id}").Result;
             return response.IsSuccessStatusCode ? true : false;
         }
 
-        public int Login(Usuario usuario)
+        public int Login(Usuario usuario, string token)
         {
+            HttpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", token);
             var response = HttpClient.PostAsJsonAsync($"login", usuario).Result;
             if (response.IsSuccessStatusCode)
             {
@@ -81,5 +88,18 @@ namespace WebAPIBlazor.Components.Services
             }
         }
 
+        public string ObtenerToken(Usuario usuario)
+        {
+            var response = HttpClient.PostAsJsonAsync($"token", usuario).Result;
+            if (response.IsSuccessStatusCode)
+            {
+                var token = response.Content.ReadAsStringAsync().Result;
+                return token;
+            }
+            else
+            {
+                return null;
+            }
+        }
     }
 }

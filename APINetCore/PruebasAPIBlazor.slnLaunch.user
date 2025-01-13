@@ -1,0 +1,15 @@
+[
+  {
+    "Name": "Nuevo perfil",
+    "Projects": [
+      {
+        "Path": "PruebasAPIBlazor.csproj",
+        "Action": "Start"
+      },
+      {
+        "Path": "..\\WebAPIBlazor\\WebAPIBlazor\\WebAPIBlazor.csproj",
+        "Action": "Start"
+      }
+    ]
+  }
+]

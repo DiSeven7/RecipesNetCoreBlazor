@@ -9,77 +9,77 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = WebAPIBlazor
 build_property.RootNamespace = WebAPIBlazor
-build_property.ProjectDir = C:\Users\DiSeven\Desktop\Proyectos .NET\RecipesNetCoreBlazor\WebAPIBlazor\WebAPIBlazor\
+build_property.ProjectDir = C:\Users\David\Desktop\Proyectos .NET\RecipesNetCoreBlazor\WebAPIBlazor\WebAPIBlazor\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 8.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\DiSeven\Desktop\Proyectos .NET\RecipesNetCoreBlazor\WebAPIBlazor\WebAPIBlazor
+build_property.MSBuildProjectDirectory = C:\Users\David\Desktop\Proyectos .NET\RecipesNetCoreBlazor\WebAPIBlazor\WebAPIBlazor
 build_property._RazorSourceGeneratorDebug = 
 build_property.EffectiveAnalysisLevelStyle = 8.0
 build_property.EnableCodeStyleSeverity = 
 
-[C:/Users/DiSeven/Desktop/Proyectos .NET/RecipesNetCoreBlazor/WebAPIBlazor/WebAPIBlazor/Components/App.razor]
+[C:/Users/David/Desktop/Proyectos .NET/RecipesNetCoreBlazor/WebAPIBlazor/WebAPIBlazor/Components/App.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xBcHAucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/DiSeven/Desktop/Proyectos .NET/RecipesNetCoreBlazor/WebAPIBlazor/WebAPIBlazor/Components/Layout/Footer.razor]
+[C:/Users/David/Desktop/Proyectos .NET/RecipesNetCoreBlazor/WebAPIBlazor/WebAPIBlazor/Components/Layout/Footer.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xMYXlvdXRcRm9vdGVyLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/DiSeven/Desktop/Proyectos .NET/RecipesNetCoreBlazor/WebAPIBlazor/WebAPIBlazor/Components/Layout/NavBar.razor]
+[C:/Users/David/Desktop/Proyectos .NET/RecipesNetCoreBlazor/WebAPIBlazor/WebAPIBlazor/Components/Layout/NavBar.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xMYXlvdXRcTmF2QmFyLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/DiSeven/Desktop/Proyectos .NET/RecipesNetCoreBlazor/WebAPIBlazor/WebAPIBlazor/Components/Pages/BorrarReceta.razor]
+[C:/Users/David/Desktop/Proyectos .NET/RecipesNetCoreBlazor/WebAPIBlazor/WebAPIBlazor/Components/Pages/BorrarReceta.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xCb3JyYXJSZWNldGEucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/DiSeven/Desktop/Proyectos .NET/RecipesNetCoreBlazor/WebAPIBlazor/WebAPIBlazor/Components/Pages/CreadorReceta.razor]
+[C:/Users/David/Desktop/Proyectos .NET/RecipesNetCoreBlazor/WebAPIBlazor/WebAPIBlazor/Components/Pages/CreadorReceta.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xDcmVhZG9yUmVjZXRhLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/DiSeven/Desktop/Proyectos .NET/RecipesNetCoreBlazor/WebAPIBlazor/WebAPIBlazor/Components/Pages/EditorReceta.razor]
+[C:/Users/David/Desktop/Proyectos .NET/RecipesNetCoreBlazor/WebAPIBlazor/WebAPIBlazor/Components/Pages/EditorReceta.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xFZGl0b3JSZWNldGEucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/DiSeven/Desktop/Proyectos .NET/RecipesNetCoreBlazor/WebAPIBlazor/WebAPIBlazor/Components/Pages/Error.razor]
+[C:/Users/David/Desktop/Proyectos .NET/RecipesNetCoreBlazor/WebAPIBlazor/WebAPIBlazor/Components/Pages/Error.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xFcnJvci5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/DiSeven/Desktop/Proyectos .NET/RecipesNetCoreBlazor/WebAPIBlazor/WebAPIBlazor/Components/Pages/FichaReceta.razor]
+[C:/Users/David/Desktop/Proyectos .NET/RecipesNetCoreBlazor/WebAPIBlazor/WebAPIBlazor/Components/Pages/FichaReceta.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xGaWNoYVJlY2V0YS5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/DiSeven/Desktop/Proyectos .NET/RecipesNetCoreBlazor/WebAPIBlazor/WebAPIBlazor/Components/Pages/Index.razor]
+[C:/Users/David/Desktop/Proyectos .NET/RecipesNetCoreBlazor/WebAPIBlazor/WebAPIBlazor/Components/Pages/Index.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xJbmRleC5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/DiSeven/Desktop/Proyectos .NET/RecipesNetCoreBlazor/WebAPIBlazor/WebAPIBlazor/Components/Pages/Login.razor]
+[C:/Users/David/Desktop/Proyectos .NET/RecipesNetCoreBlazor/WebAPIBlazor/WebAPIBlazor/Components/Pages/Login.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xMb2dpbi5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/DiSeven/Desktop/Proyectos .NET/RecipesNetCoreBlazor/WebAPIBlazor/WebAPIBlazor/Components/Pages/Perfil.razor]
+[C:/Users/David/Desktop/Proyectos .NET/RecipesNetCoreBlazor/WebAPIBlazor/WebAPIBlazor/Components/Pages/Perfil.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xQZXJmaWwucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/DiSeven/Desktop/Proyectos .NET/RecipesNetCoreBlazor/WebAPIBlazor/WebAPIBlazor/Components/Pages/Registro.razor]
+[C:/Users/David/Desktop/Proyectos .NET/RecipesNetCoreBlazor/WebAPIBlazor/WebAPIBlazor/Components/Pages/Registro.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xSZWdpc3Ryby5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/DiSeven/Desktop/Proyectos .NET/RecipesNetCoreBlazor/WebAPIBlazor/WebAPIBlazor/Components/Pages/VistaRecetas.razor]
+[C:/Users/David/Desktop/Proyectos .NET/RecipesNetCoreBlazor/WebAPIBlazor/WebAPIBlazor/Components/Pages/VistaRecetas.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xWaXN0YVJlY2V0YXMucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/DiSeven/Desktop/Proyectos .NET/RecipesNetCoreBlazor/WebAPIBlazor/WebAPIBlazor/Components/Routes.razor]
+[C:/Users/David/Desktop/Proyectos .NET/RecipesNetCoreBlazor/WebAPIBlazor/WebAPIBlazor/Components/Routes.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xSb3V0ZXMucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/DiSeven/Desktop/Proyectos .NET/RecipesNetCoreBlazor/WebAPIBlazor/WebAPIBlazor/Components/_Imports.razor]
+[C:/Users/David/Desktop/Proyectos .NET/RecipesNetCoreBlazor/WebAPIBlazor/WebAPIBlazor/Components/_Imports.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xfSW1wb3J0cy5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/DiSeven/Desktop/Proyectos .NET/RecipesNetCoreBlazor/WebAPIBlazor/WebAPIBlazor/Components/Layout/MainLayout.razor]
+[C:/Users/David/Desktop/Proyectos .NET/RecipesNetCoreBlazor/WebAPIBlazor/WebAPIBlazor/Components/Layout/MainLayout.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xMYXlvdXRcTWFpbkxheW91dC5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = b-e3mz6e5pel

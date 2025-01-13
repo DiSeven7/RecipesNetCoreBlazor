@@ -330,14 +330,9 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "email",
-        "Type": "System.String",
-        "IsRequired": false
-      },
-      {
-        "Name": "contrase\u00F1a",
-        "Type": "System.String",
-        "IsRequired": false
+        "Name": "usuario",
+        "Type": "PruebasAPIBlazor.Models.Usuario",
+        "IsRequired": true
       }
     ],
     "ReturnTypes": []

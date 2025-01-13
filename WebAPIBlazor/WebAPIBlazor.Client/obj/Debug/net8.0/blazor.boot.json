@@ -1,7 +1,7 @@
 {
   "mainAssemblyName": "WebAPIBlazor.Client",
   "resources": {
-    "hash": "sha256-0UR4w/aizqOc17ZKWFSnoAbFueliy3MfzFNxLs65uAY=",
+    "hash": "sha256-2Ykp6Kw3fVFedutFc3qHGdIaHN/TwIeLtGBk9lyWbbY=",
     "jsModuleNative": {
       "dotnet.native.js": "sha256-VdKq87/z5NIxZKmuM+fv38XF+RcEb/bg3jVBwQSfwP4="
     },
@@ -209,10 +209,10 @@
       "mscorlib.wasm": "sha256-Gz8PyW2/fwihe5ul81OwmRUrU71r+KtbyRw6xlOGD+Q=",
       "netstandard.wasm": "sha256-jMTqIQzoDS810lyhZpMO5eEC36EzntXqSVn+2qwkOMQ=",
       "System.Private.CoreLib.wasm": "sha256-NFj5WE5VLP2LptZIRJCUIc1AMk06FmxpsSILfPISwAw=",
-      "WebAPIBlazor.Client.wasm": "sha256-EdK/dbTnZuqN8xFiMFZSYYb/nY4Q3LZ661RHtXa6d0s="
+      "WebAPIBlazor.Client.wasm": "sha256-frEwXbMZSGkb/Fj9HsYiYLIKYEQLeVQ9iKstA9On4Tw="
     },
     "pdb": {
-      "WebAPIBlazor.Client.pdb": "sha256-jdRAVhM0jTsn+zr5jrLw5f2dwAcAZAWO31+xtyVSkMg="
+      "WebAPIBlazor.Client.pdb": "sha256-DUfNLtT/sUAoj+fbm4LUJBHwc6Yngs2yoZZhjWK3BGw="
     }
   },
   "cacheBootResources": true,

@@ -1,16 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.IdentityModel.Tokens.Jwt;
-using System.Linq;
-using System.Security.Claims;
-using System.Text;
-using System.Text.RegularExpressions;
-using System.Threading.Tasks;
+﻿using System.Text.RegularExpressions;
 using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.IdentityModel.Tokens;
 using PruebasAPIBlazor.Context;
 using PruebasAPIBlazor.Helpers;
 using PruebasAPIBlazor.Models;
@@ -58,7 +49,6 @@ namespace PruebasAPIBlazor.Controllers
             }
         }
 
-        [Authorize]
         [HttpPost("postUsuario")]
         public async Task<ActionResult<Usuario>> PostUsuario(Usuario usuario)
         {
@@ -99,12 +89,12 @@ namespace PruebasAPIBlazor.Controllers
         }
 
         [HttpPost("token")]
-        public IActionResult Token(string email, string contraseña)
+        public IActionResult Token(Usuario usuario)
         {
             Usuario objetivo = null;
             try
             {
-                objetivo = _context.Usuarios.First(x => x.Contraseña.Equals(_authenticationService.Encrypt(contraseña, _config.GetSection("Salt").Value)) && x.Email.Equals(email));
+                objetivo = _context.Usuarios.First(x => x.Contraseña.Equals(_authenticationService.Encrypt(usuario.Contraseña, _config.GetSection("Salt").Value)) && x.Email.Equals(usuario.Email));
                 if (!objetivo.Verificado)
                 {
                     objetivo = null;
@@ -121,9 +111,8 @@ namespace PruebasAPIBlazor.Controllers
             // Generate JWT token
             var token = _authenticationService.CreateJwtToken(_config, objetivo.Id);
 
-            return Ok(new { token });
+            return Ok(token);
         }
-
         #endregion
 
         #region Gets

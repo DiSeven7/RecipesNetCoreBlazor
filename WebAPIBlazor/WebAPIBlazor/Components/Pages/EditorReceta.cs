@@ -73,7 +73,7 @@ namespace WebAPIBlazor.Components.Pages
             {
                 Receta.Ingredientes = Receta.Ingredientes.Replace("\n", ";");
                 Receta.Referencias = Receta.Referencias.Replace("\n", ";");
-                if (RecetaService.PutReceta(Receta))
+                if (RecetaService.PutReceta(Receta, ObjectTransporter.RetrieveData("token").ToString()))
                 {
                     NavigationManager.NavigateTo($"receta/{Receta.Id}", true);
                 }

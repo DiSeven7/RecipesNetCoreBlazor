@@ -47,9 +47,11 @@ namespace WebAPIBlazor.Components.Pages
 
         protected override void OnInitialized()
         {
-            if (ObjectTransporter.RetrieveData("id") != null)
+            var id = ObjectTransporter.RetrieveData("id");
+            var token = ObjectTransporter.RetrieveData("token");
+            if (id != null && token != null)
             {
-                Usuario = UsuarioService.GetUsuario((int)ObjectTransporter.RetrieveData("id"));
+                Usuario = UsuarioService.GetUsuario((int)id, token.ToString());
                 Recetas = RecetaService.GetRecetasUsuario(Usuario.Id);
                 base.OnInitialized();
             }
@@ -62,6 +64,7 @@ namespace WebAPIBlazor.Components.Pages
         public void CerrarSesion()
         {
             ObjectTransporter.RemoveData("id");
+            ObjectTransporter.RemoveData("token");
             NavigationManager.NavigateTo("/", true);
         }
 
@@ -97,7 +100,7 @@ namespace WebAPIBlazor.Components.Pages
             else
             {
                 Usuario.Contraseña = NuevaContraseña;
-                if (UsuarioService.PutUsuario(Usuario))
+                if (UsuarioService.PutUsuario(Usuario, ObjectTransporter.RetrieveData("token").ToString()))
                 {
                     Modificado = true;
                     HuboError = false;

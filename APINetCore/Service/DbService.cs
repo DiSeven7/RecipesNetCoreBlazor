@@ -1,8 +1,6 @@
-﻿using Microsoft.EntityFrameworkCore;
-using PruebasAPIBlazor.Context;
+﻿using PruebasAPIBlazor.Context;
 using PruebasAPIBlazor.Models;
 using System.Drawing;
-using System.Text;
 
 namespace PruebasAPIBlazor.Helpers
 {

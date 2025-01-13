@@ -10,7 +10,6 @@ namespace WebAPIBlazor.Components.Pages
         [Parameter]
         public int Id { get; set; }
 
-
         [Inject]
         public IRecetaService RecetaService { get; set; }
 
@@ -22,12 +21,14 @@ namespace WebAPIBlazor.Components.Pages
 
         protected override void OnInitialized()
         {
-            if (ObjectTransporter.RetrieveData("id") != null)
+            var id = ObjectTransporter.RetrieveData("id");
+            var token = ObjectTransporter.RetrieveData("token");
+            if (id != null && token != null)
             {
                 var receta = RecetaService.GetReceta(Id);
-                if (receta.IdAutor == (int)ObjectTransporter.RetrieveData("id"))
+                if (receta.IdAutor == (int)id)
                 {
-                    RecetaService.DeleteReceta(receta);
+                    RecetaService.DeleteReceta(receta, token.ToString());
                 }
                 NavigationManager.NavigateTo("/perfil", true);
                 base.OnInitialized();
